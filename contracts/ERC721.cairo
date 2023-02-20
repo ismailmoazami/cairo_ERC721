@@ -134,7 +134,7 @@ func safeTransferFrom{pedersen_ptr: HashBuiltin*, syscall_ptr: felt*, range_chec
 }
 
 @external
-func declare_animal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+func mint{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     sex_: felt, legs_: felt, wings_: felt
 ) -> (token_id: Uint256){
     let (to) = get_caller_address();
@@ -148,7 +148,7 @@ func declare_animal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_
 }
 
 @external
-func declare_dead_animal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+func burn{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     token_id: Uint256
 ) {
    // 0x00000000000000000000000000000000000000000000000000000000000dead 
